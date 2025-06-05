@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading Screen Example</title>
+
+</head>
+<body>
+
+<div id="content">
+  <button id="myButton">Klik Saya</button>
+  <p>Ini adalah konten halaman.</p>
+</div>
+
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<script>
+const button = document.getElementById('myButton');
+const loadingScreen = document.getElementById('loading-screen');
+const content = document.getElementById('content');
+
+button.addEventListener('click', () => {
+  loadingScreen.style.display = 'flex';
+  content.style.opacity = 0.3; // Reduce opacity of content while loading
+
+  // Simulasi proses loading (ganti dengan kode loading Anda)
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+    content.style.opacity = 1; // Restore opacity of content
+    // Tambahkan kode untuk menampilkan hasil setelah loading selesai
+    alert("Loading selesai!");
+  }, 3000);
+});
+</script>
+
+</body>
+</html>
